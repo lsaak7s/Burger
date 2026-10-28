@@ -1,7 +1,12 @@
+import logo from '../../assets/logo.jpg';
+import { Conteiner, LeftConteiner } from './styles';
+
 export function Login() {
   return (
-    <div>
-      <h1>ola</h1>
-    </div>
+    <Conteiner>
+      <LeftConteiner>
+        <img src={logo}></img>
+      </LeftConteiner>
+    </Conteiner>
   );
 }
