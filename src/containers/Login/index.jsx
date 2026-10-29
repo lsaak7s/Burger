@@ -1,3 +1,4 @@
+import logo from '../../assets/logo.jpg';
 import {
   Conteiner,
   LeftConteiner,
@@ -6,14 +7,13 @@ import {
   Button,
   Title,
   Form,
-  Link,
 } from './styles';
 
 export function Login() {
   return (
     <Conteiner>
       <LeftConteiner>
-        <img></img>
+        <img src={logo}></img>
       </LeftConteiner>
       <RightConteiner>
         <Title>Ola bem vindo</Title>
@@ -28,7 +28,6 @@ export function Login() {
             <input type="password"></input>
           </InputContainer>
         </Form>
-        <Link>Esqueci a senha</Link>
         <Button>entra</Button>
       </RightConteiner>
     </Conteiner>
