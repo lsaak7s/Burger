@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
   body { 
     margin: 0;
     padding:0;
-    background-color:rgb(61, 51, 103);
+    box-sizing:border-box;
+    background-color:rgb(196, 92, 32);
    }
 `;
 export default GlobalStyle;
