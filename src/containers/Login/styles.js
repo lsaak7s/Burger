@@ -1,37 +1,38 @@
 import styled from 'styled-components';
 
+import Logo from '../../assets/bg 1.png';
+
 export const Conteiner = styled.div`
-  display: grid;
-  grid-template-areas: ' left right ';
+  display: flex;
+  height: 100%;
+  width: 100%;
 `;
 
 export const LeftConteiner = styled.div`
-  grid-area: left;
-
-  img {
-    height: 98vh;
-    width: 60vw;
-  }
+  background: url('${Logo}');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 `;
+
 export const RightConteiner = styled.div`
-  grid-area: right;
   background-color: rgb(32, 94, 38);
   height: 100vh;
   width: 40vw;
-`;
-export const Title = styled.h1`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+`;
+export const Title = styled.h1`
   text-align: center;
-
   h1 {
     font-size: 5vw;
     width: 100%;
   }
   h2 {
     font-size: 4vw;
-    margin-top: 0px;
   }
 `;
 export const Form = styled.form``;
@@ -39,6 +40,16 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 2vh;
+  .Input {
+    text-align: center;
+    height: 6vh;
+    width: 30vw;
+    border-radius: 1vw;
+  }
 `;
-export const Button = styled.button``;
+export const Button = styled.button`
+  height: 7vh;
+  width: 20vw;
+  border-radius: 1vh;
+`;

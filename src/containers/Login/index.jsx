@@ -1,5 +1,3 @@
-import Logo from '../../assets/bg 1.png';
-//import miniB from '../../assets/miniB.png';
 import {
   Conteiner,
   LeftConteiner,
@@ -14,7 +12,7 @@ export function Login() {
   return (
     <Conteiner>
       <LeftConteiner>
-        <img src={Logo}></img>
+        <img></img>
       </LeftConteiner>
       <RightConteiner>
         <Title>
@@ -23,10 +21,12 @@ export function Login() {
         </Title>
         <Form>
           <InputContainer>
-            <input type="email" placeholder="Email"></input>
-          </InputContainer>
-          <InputContainer>
-            <input type="password" placeholder="Senha"></input>
+            <input className="Input" type="email" placeholder="Email"></input>
+            <input
+              className="Input"
+              type="password"
+              placeholder="Senha"
+            ></input>
             <Button>Entrar</Button>
           </InputContainer>
         </Form>
