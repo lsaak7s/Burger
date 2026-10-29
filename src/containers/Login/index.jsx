@@ -23,14 +23,12 @@ export function Login() {
         </Title>
         <Form>
           <InputContainer>
-            <label>Email</label>
-            <input type="email"></input>
+            <input type="email" placeholder="Email"></input>
           </InputContainer>
           <InputContainer>
-            <label>Senha</label>
-            <input type="password"></input>
+            <input type="password" placeholder="Senha"></input>
+            <Button>Entrar</Button>
           </InputContainer>
-          <Button>entra</Button>
         </Form>
       </RightConteiner>
     </Conteiner>

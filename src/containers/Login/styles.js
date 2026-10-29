@@ -16,21 +16,29 @@ export const LeftConteiner = styled.div`
 export const RightConteiner = styled.div`
   grid-area: right;
   background-color: rgb(32, 94, 38);
-  height: 98vh;
+  height: 100vh;
   width: 40vw;
 `;
 export const Title = styled.h1`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 30vh;
+  text-align: center;
+
   h1 {
     font-size: 5vw;
+    width: 100%;
   }
   h2 {
     font-size: 4vw;
+    margin-top: 0px;
   }
 `;
 export const Form = styled.form``;
-export const InputContainer = styled.div``;
+export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
 export const Button = styled.button``;
