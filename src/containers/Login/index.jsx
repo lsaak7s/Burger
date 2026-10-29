@@ -6,7 +6,6 @@ import {
   Button,
   Title,
   Form,
-  Link,
 } from './styles';
 
 export function Login() {
@@ -16,20 +15,21 @@ export function Login() {
         <img></img>
       </LeftConteiner>
       <RightConteiner>
-        <Title>Ola bem vindo</Title>
-        <span>login e senha</span>
+        <Title>
+          <h1>Ola bem vindo</h1>
+          <h2>Asseso</h2>
+        </Title>
         <Form>
           <InputContainer>
-            <label>Email</label>
-            <input type="email"></input>
-          </InputContainer>
-          <InputContainer>
-            <label>Senha</label>
-            <input type="password"></input>
+            <input className="Input" type="email" placeholder="Email"></input>
+            <input
+              className="Input"
+              type="password"
+              placeholder="Senha"
+            ></input>
+            <Button>Entrar</Button>
           </InputContainer>
         </Form>
-        <Link>Esqueci a senha</Link>
-        <Button>entra</Button>
       </RightConteiner>
     </Conteiner>
   );
