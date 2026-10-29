@@ -1,18 +1,35 @@
-import logo from '../../assets/logo.jpg';
-import { Conteiner, LeftConteiner, RightConteiner } from './styles';
+import {
+  Conteiner,
+  LeftConteiner,
+  RightConteiner,
+  InputContainer,
+  Button,
+  Title,
+  Form,
+  Link,
+} from './styles';
 
 export function Login() {
   return (
     <Conteiner>
       <LeftConteiner>
-        <img src={logo} alt="LOGO"></img>
+        <img></img>
       </LeftConteiner>
       <RightConteiner>
-        <title>Ola bem vindo</title>
+        <Title>Ola bem vindo</Title>
         <span>login e senha</span>
-        <form>
-          <imput
-        </form>
+        <Form>
+          <InputContainer>
+            <label>Email</label>
+            <input type="email"></input>
+          </InputContainer>
+          <InputContainer>
+            <label>Senha</label>
+            <input type="password"></input>
+          </InputContainer>
+        </Form>
+        <Link>Esqueci a senha</Link>
+        <Button>entra</Button>
       </RightConteiner>
     </Conteiner>
   );
