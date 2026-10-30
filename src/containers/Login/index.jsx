@@ -6,30 +6,26 @@ import {
   Button,
   Title,
   Form,
+  Link,
 } from './styles';
 
 export function Login() {
   return (
     <Conteiner>
-      <LeftConteiner>
-        <img></img>
-      </LeftConteiner>
+      <LeftConteiner></LeftConteiner>
       <RightConteiner>
         <Title>
-          <h1>Ola bem vindo</h1>
-          <h2>Asseso</h2>
+          <h1>Entrar na sua Conta do Burguer</h1>
         </Title>
         <Form>
           <InputContainer>
-            <input className="Input" type="email" placeholder="Email"></input>
-            <input
-              className="Input"
-              type="password"
-              placeholder="Senha"
-            ></input>
-            <Button>Entrar</Button>
+            <p>Insira Seu</p>
+            <input type="email" placeholder="Email"></input>
+            <input type="password" placeholder="password"></input>
           </InputContainer>
         </Form>
+        <Button>Entrar</Button>
+        <Link>Ainda Não Tem uma Conta? please.</Link>
       </RightConteiner>
     </Conteiner>
   );
