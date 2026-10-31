@@ -37,7 +37,7 @@ export const Title = styled.h1`
   width: 80%;
 
   h1 {
-    color: white;
+    color: #000000;
     font-size: 4vw;
   }
 `;
@@ -48,24 +48,38 @@ export const InputContainer = styled.div`
 
   gap: 5vh;
   Input {
-    height: 8vh;
+    height: 9vh;
     width: 30vw;
+
     border-radius: 10px;
-    text-align: center;
+    border: solid 1px black;
+
+    opacity: 0.9;
   }
   p {
-    color: white;
+    color: #000000;
     font-size: 3vw;
   }
-  input::placeholder{black}
+  input::placeholder {
+    color: #000000;
+    font-size: 2vw;
+  }
 `;
 export const Button = styled.button`
   height: 8vh;
   width: 20vw;
-  border-radius: 10px;
 
-  align-items: center;
+  opacity: 0.9;
+
+  border-radius: 10px;
+  border: solid 1px black;
+
+  text-align: center;
 `;
 export const Link = styled.button`
   background-color: transparent;
+  border: none;
+
+  font-size: 2vw;
+  font-weight: 500;
 `;

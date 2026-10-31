@@ -21,7 +21,7 @@ export function Login() {
           <InputContainer>
             <p>Insira Seu</p>
             <input type="email" placeholder="Email"></input>
-            <input type="password" placeholder="password"></input>
+            <input type="password" placeholder="Senha"></input>
           </InputContainer>
         </Form>
         <Button>Entrar</Button>
