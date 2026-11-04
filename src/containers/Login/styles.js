@@ -45,12 +45,15 @@ export const Title = styled.h1`
     font-size: 3vw;
   }
 `;
-export const Form = styled.form``;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+`;
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 3vh;
   Input {
     height: 9vh;

@@ -16,8 +16,8 @@ import {
 export function Login() {
   const schema = yup
     .object({
-      email: yup.string().required().email(),
-      password: yup.string().min(6).required(),
+      email: yup.string().email('Precisa ser um formato de email').required(),
+      password: yup.string().min(6, 'No minimo 6 Caracteres').required(),
     })
     .required();
   const {
@@ -27,6 +27,7 @@ export function Login() {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  console.log(errors);
   const onSubmit = (data) => console.log(data);
 
   return (
@@ -41,14 +42,20 @@ export function Login() {
           <InputContainer>
             <input
               {...register('email')}
-              type="email"
+              //type="email"
               placeholder="Email"
             ></input>
+            <p>{errors?.email?.message}</p>
+          </InputContainer>
+          <InputContainer>
             <input
               {...register('password')}
               type="password"
               placeholder="Senha"
             ></input>
+            <p>{errors?.password?.message}</p>
+          </InputContainer>
+          <InputContainer>
             <Button type="submit">Entrar</Button>
             <Link>Ainda Não Tem uma Conta? please.</Link>
           </InputContainer>
