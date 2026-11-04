@@ -1,9 +1,9 @@
+import { Button } from '../../components';
 import {
   Conteiner,
   LeftConteiner,
   RightConteiner,
   InputContainer,
-  Button,
   Title,
   Form,
   Link,

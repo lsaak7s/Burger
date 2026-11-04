@@ -65,17 +65,7 @@ export const InputContainer = styled.div`
     font-size: 2vw;
   }
 `;
-export const Button = styled.button`
-  height: 8vh;
-  width: 20vw;
 
-  opacity: 0.9;
-
-  border-radius: 10px;
-  border: solid 1px black;
-
-  text-align: center;
-`;
 export const Link = styled.button`
   background-color: transparent;
   border: none;
