@@ -32,7 +32,7 @@ export const RightConteiner = styled.div`
   width: 50%;
   gap: 12vh;
 `;
-export const Title = styled.h1`
+/*export const Title = styled.div`
   height: 20%;
   width: 80%;
 
@@ -43,6 +43,28 @@ export const Title = styled.h1`
   p {
     color: #000000;
     font-size: 3vw;
+  }
+`;*/
+export const Title = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* <--- Isso controla a distância exata entre o H1 e o P */
+
+  h1 {
+    color: #000000;
+    font-size: 4vw;
+    margin: 0; /* <--- Tira o espaço gigante do navegador */
+    line-height: 1.1; /* <--- Junta as linhas se o texto quebrar */
+    text-align: center;
+  }
+
+  p {
+    color: #000000;
+    font-size: 3vw;
+    margin: 0; /* <--- Tira a margem do parágrafo */
+    text-align: center;
   }
 `;
 export const Form = styled.form`
@@ -70,6 +92,7 @@ export const InputContainer = styled.div`
   }
   p {
     font-size: 2vw;
+    margim: 0;
   }
 `;
 export const Link = styled.button`
