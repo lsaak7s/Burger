@@ -12,6 +12,6 @@ export const ConteinerButton = styled.button`
   text-align: center;
 
   &:hover {
-    background-color: rgb(252, 252, 252);
+    background-color: ${(rest) => (rest.red ? 'rgb(252, 252, 252' : 'rgb(135, 35, 35)')};
   }
 `;
