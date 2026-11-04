@@ -16,8 +16,8 @@ import {
 export function Login() {
   const schema = yup
     .object({
-      email: yup.string().email('Precisa ser um formato de email').required(),
-      password: yup.string().min(7, 'No minimo 7 Caracteres').required(),
+      email: yup.string().email('Formato Errado').required('Cade o email?'),
+      password: yup.string().required('Cade a senha?').min(7, 'No minimo 7'),
     })
     .required();
   const {

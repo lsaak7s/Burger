@@ -68,11 +68,16 @@ export const InputContainer = styled.div`
     color: #000000;
     font-size: 2vw;
   }
+  p {
+    font-size: 2vw;
+  }
 `;
 export const Link = styled.button`
   background-color: transparent;
-  border: none;
   color: #000000;
+
+  border: none;
+
   font-size: 2vw;
   font-weight: 500;
 `;
