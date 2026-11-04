@@ -30,23 +30,53 @@ export const RightConteiner = styled.div`
 
   height: 100%;
   width: 50%;
-  gap: 5vh;
+  gap: 12vh;
 `;
-export const Title = styled.h1`
-  height: 15vh;
+/*export const Title = styled.div`
+  height: 20%;
   width: 80%;
 
   h1 {
     color: #000000;
     font-size: 4vw;
   }
+  p {
+    color: #000000;
+    font-size: 3vw;
+  }
+`;*/
+export const Title = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* <--- Isso controla a distância exata entre o H1 e o P */
+
+  h1 {
+    color: #000000;
+    font-size: 4vw;
+    margin: 0; /* <--- Tira o espaço gigante do navegador */
+    line-height: 1.1; /* <--- Junta as linhas se o texto quebrar */
+    text-align: center;
+  }
+
+  p {
+    color: #000000;
+    font-size: 3vw;
+    margin: 0; /* <--- Tira a margem do parágrafo */
+    text-align: center;
+  }
 `;
-export const Form = styled.form``;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+`;
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-  gap: 5vh;
+  align-items: center;
+  gap: 3vh;
   Input {
     height: 9vh;
     width: 30vw;
@@ -56,28 +86,19 @@ export const InputContainer = styled.div`
 
     opacity: 0.9;
   }
-  p {
-    color: #000000;
-    font-size: 3vw;
-  }
   input::placeholder {
     color: #000000;
     font-size: 2vw;
   }
-`;
-export const Button = styled.button`
-  height: 8vh;
-  width: 20vw;
-
-  opacity: 0.9;
-
-  border-radius: 10px;
-  border: solid 1px black;
-
-  text-align: center;
+  p {
+    font-size: 2vw;
+    margim: 0;
+  }
 `;
 export const Link = styled.button`
   background-color: transparent;
+  color: #000000;
+
   border: none;
 
   font-size: 2vw;
