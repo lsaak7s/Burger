@@ -10,4 +10,8 @@ export const ConteinerButton = styled.button`
   border: solid 1px black;
 
   text-align: center;
+
+  &:hover {
+    background-color: rgb(252, 252, 252);
+  }
 `;

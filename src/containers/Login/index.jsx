@@ -1,4 +1,4 @@
-import { Button } from '../../components';
+import { Button } from '../../components/button';
 import {
   Conteiner,
   LeftConteiner,
@@ -15,7 +15,7 @@ export function Login() {
       <LeftConteiner></LeftConteiner>
       <RightConteiner>
         <Title>
-          <h1>Entrar na sua Conta do Burguer</h1>
+          <h1>Olá entre na sua Conta do Burger</h1>
         </Title>
         <Form>
           <InputContainer>
