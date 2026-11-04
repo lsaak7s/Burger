@@ -30,23 +30,28 @@ export const RightConteiner = styled.div`
 
   height: 100%;
   width: 50%;
-  gap: 5vh;
+  gap: 12vh;
 `;
 export const Title = styled.h1`
-  height: 15vh;
+  height: 20%;
   width: 80%;
 
   h1 {
     color: #000000;
     font-size: 4vw;
   }
+  p {
+    color: #000000;
+    font-size: 3vw;
+  }
 `;
 export const Form = styled.form``;
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  gap: 5vh;
+  gap: 3vh;
   Input {
     height: 9vh;
     width: 30vw;
@@ -56,20 +61,15 @@ export const InputContainer = styled.div`
 
     opacity: 0.9;
   }
-  p {
-    color: #000000;
-    font-size: 3vw;
-  }
   input::placeholder {
     color: #000000;
     font-size: 2vw;
   }
 `;
-
 export const Link = styled.button`
   background-color: transparent;
   border: none;
-
+  color: #000000;
   font-size: 2vw;
   font-weight: 500;
 `;
