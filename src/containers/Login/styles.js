@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import fundo from '../../assets/fundo1.jpg';
-import Logo from '../../assets/Logo1.jpg';
+import Logo from '../../assets/logo1.jpg';
 
 export const Conteiner = styled.div`
   display: flex;

@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import { Button } from '../../components/button';
+import { api } from '../../services/api';
 import {
   Conteiner,
   LeftConteiner,
@@ -32,7 +33,12 @@ export function Login() {
     resolver: yupResolver(schema),
   });
   console.log(errors);
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const res = await api.post('/Login', {
+      email: data.email,
+      password: data.password,
+    });
+  };
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
   return (
@@ -45,11 +51,7 @@ export function Login() {
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <InputContainer>
-            <input
-              {...register('email')}
-              //type="email"
-              placeholder="Email"
-            ></input>
+            <input {...register('email')} placeholder="Email"></input>
             <p>{errors?.email?.message}</p>
           </InputContainer>
           <InputContainer>
