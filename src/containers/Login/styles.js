@@ -63,6 +63,7 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 14vh; /* reserva espaço para o input e a mensagem */
   gap: 4vh;
   Input {
     height: 9vh;
