@@ -7,11 +7,11 @@ export const ConteinerButton = styled.button`
   opacity: 0.9;
 
   border-radius: 10px;
-  border: solid 1px black;
+  border: solid 2px black;
 
   text-align: center;
 
   &:hover {
-    background-color: ${(rest) => (rest.red ? 'rgb(252, 252, 252' : 'rgb(135, 35, 35)')};
+    background-color: rgb(252, 252, 252);
   }
 `;
