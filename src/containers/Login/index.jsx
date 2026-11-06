@@ -1,8 +1,10 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 
 import { Button } from '../../components/button';
+import { api } from '../../services/api';
 import {
   Conteiner,
   LeftConteiner,
@@ -11,6 +13,9 @@ import {
   Title,
   Form,
   Link,
+  PasswordBox,
+  ShowPasswordButton,
+  Input,
 } from './styles';
 
 export function Login() {
@@ -27,8 +32,16 @@ export function Login() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  console.log(errors);
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    const res = await api.post('/Login', {
+      email: data.email,
+      password: data.password,
+    });
+    console.log(res);
+  };
+
+  const [mostrarSenha, setMostrarSenha] = useState(false);
 
   return (
     <Conteiner>
@@ -40,28 +53,28 @@ export function Login() {
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <InputContainer>
-            <input
-              {...register('email')}
-              //type="email"
-              placeholder="Email"
-            ></input>
+            <input {...register('email')} placeholder="Email"></input>
             <p>{errors?.email?.message}</p>
           </InputContainer>
           <InputContainer>
-            <input
-              {...register('password')}
-              type="password"
-              placeholder="Senha"
-            ></input>
+            <PasswordBox>
+              <Input
+                {...register('password')}
+                type={mostrarSenha ? 'text' : 'password'}
+                placeholder="Senha"
+              />
+
+              <ShowPasswordButton
+                type="button"
+                onClick={() => setMostrarSenha(!mostrarSenha)}
+              >
+                {mostrarSenha ? '🙉' : '🙈'}
+              </ShowPasswordButton>
+            </PasswordBox>
             <p>{errors?.password?.message}</p>
           </InputContainer>
           <InputContainer>
-            <Button type="submit" red={true}>
-              Entrar
-            </Button>
-            <Button type="submit" red={false}>
-              sair
-            </Button>
+            <Button type="submit">Entrar</Button>
             <Link>Ainda Não Tem uma Conta? please.</Link>
           </InputContainer>
         </Form>
