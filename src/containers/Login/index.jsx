@@ -22,7 +22,7 @@ export function Login() {
   const schema = yup
     .object({
       email: yup.string().email('Formato Errado').required('Cade o email?'),
-      password: yup.string().required('Cade a senha?').min(7, 'No minimo 7'),
+      password: yup.string().required('Cade a senha?').min(6, 'No minimo 6'),
     })
     .required();
   const {
