@@ -32,13 +32,15 @@ export function Login() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  console.log(errors);
+
   const onSubmit = async (data) => {
     const res = await api.post('/Login', {
       email: data.email,
       password: data.password,
     });
+    console.log(res);
   };
+
   const [mostrarSenha, setMostrarSenha] = useState(false);
 
   return (
