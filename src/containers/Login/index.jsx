@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
 import { Button } from '../../components/button';
@@ -22,7 +23,7 @@ export function Login() {
   const schema = yup
     .object({
       email: yup.string().email('Formato Errado').required('Cade o email?'),
-      password: yup.string().required('Cade a senha?').min(7, 'No minimo 7'),
+      password: yup.string().required('Cade a senha?').min(6, 'No minimo 6'),
     })
     .required();
   const {
@@ -34,10 +35,17 @@ export function Login() {
   });
 
   const onSubmit = async (data) => {
-    const res = await api.post('/Login', {
-      email: data.email,
-      password: data.password,
-    });
+    const res = await toast.promise(
+      api.post('/Login', {
+        email: data.email,
+        password: data.password,
+      }),
+      {
+        pending: 'Promise is pending',
+        success: 'Promise resolved 👌',
+        error: 'Promise rejected 🤯',
+      }
+    );
     console.log(res);
   };
 

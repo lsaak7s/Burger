@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import 'react-toastify/ReactToastify.css';
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
   * { 
