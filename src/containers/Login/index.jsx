@@ -41,9 +41,9 @@ export function Login() {
         password: data.password,
       }),
       {
-        pending: 'Promise is pending',
-        success: 'Promise resolved 👌',
-        error: 'Promise rejected 🤯',
+        pending: 'Aguarde',
+        success: 'Bem vindo',
+        error: 'Deu ruim filho',
       }
     );
     console.log(res);
