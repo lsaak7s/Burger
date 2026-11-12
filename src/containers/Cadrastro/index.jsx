@@ -27,12 +27,11 @@ export function Cadrastro() {
       password: yup.string().required('Cade a senha?').min(6, 'No minimo 6'),
       confirmPassword: yup
         .string()
-        .oneOf(yup.ref(['passowrd']), 'devem ser iguais'),
+        .oneOf([yup.ref('passowrd')], 'devem ser iguais'),
     })
     .required();
   const {
     register,
-
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -47,9 +46,9 @@ export function Cadrastro() {
         password: data.password,
       }),
       {
-        pending: 'Promise is pending',
-        success: 'Promise resolved 👌',
-        error: 'Promise rejected 🤯',
+        pending: 'Aguarde',
+        success: 'Bem vindo',
+        error: 'Deu ruim filho',
       }
     );
     console.log(res);
@@ -62,7 +61,7 @@ export function Cadrastro() {
       <LeftConteiner></LeftConteiner>
       <RightConteiner>
         <Title>
-          <h1>Olá entre na sua Conta do Burger</h1>
+          <h1>Olá Crie sua Conta no Burger</h1>
           <p>Insira Seu</p>
         </Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
