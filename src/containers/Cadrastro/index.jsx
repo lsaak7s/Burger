@@ -58,9 +58,9 @@ export function Cadrastro() {
       } else {
         throw new Error();
       }
+      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       toast.error('Conta ja criada');
-      console.log(error);
     }
   };
 
