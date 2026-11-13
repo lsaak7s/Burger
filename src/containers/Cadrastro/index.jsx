@@ -50,6 +50,17 @@ export function Cadrastro() {
         validateStatus: () => true,
       }
     );
+    try {
+      if (status === 200 || status === 201) {
+        toast.success('Conta criada');
+      } else if (status === 400) {
+        toast.error('Conta ja criada');
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
+      toast.error('Conta ja criada');
+    }
 
     console.log(status);
   };
