@@ -60,9 +60,8 @@ export function Cadrastro() {
       }
     } catch (error) {
       toast.error('Conta ja criada');
+      console.log(error);
     }
-
-    console.log(status);
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
