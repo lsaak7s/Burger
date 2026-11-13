@@ -39,19 +39,19 @@ export function Cadrastro() {
   });
 
   const onSubmit = async (data) => {
-    const res = await toast.promise(
-      api.post('/users', {
+    const { status } = await api.post(
+      '/users',
+      {
         name: data.name,
         email: data.email,
         password: data.password,
-      }),
+      },
       {
-        pending: 'Aguarde',
-        success: 'Bem vindo',
-        error: 'Deu ruim filho',
+        validateStatus: () => true,
       }
     );
-    console.log(res);
+
+    console.log(status);
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
