@@ -39,19 +39,29 @@ export function Cadrastro() {
   });
 
   const onSubmit = async (data) => {
-    const res = await toast.promise(
-      api.post('/users', {
+    const { status } = await api.post(
+      '/users',
+      {
         name: data.name,
         email: data.email,
         password: data.password,
-      }),
+      },
       {
-        pending: 'Aguarde',
-        success: 'Bem vindo',
-        error: 'Deu ruim filho',
+        validateStatus: () => true,
       }
     );
-    console.log(res);
+    try {
+      if (status === 200 || status === 201) {
+        toast.success('Conta criada');
+      } else if (status === 400) {
+        toast.error('Conta ja criada');
+      } else {
+        throw new Error();
+      }
+      // eslint-disable-next-line no-unused-vars
+    } catch (error) {
+      toast.error('Conta ja criada');
+    }
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
