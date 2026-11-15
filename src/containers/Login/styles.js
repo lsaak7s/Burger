@@ -127,5 +127,5 @@ export const p = styled.button`
 
 export const Link = styled(ReactLink)`
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
 `;

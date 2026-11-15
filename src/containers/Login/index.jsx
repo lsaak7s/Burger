@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -20,6 +21,7 @@ import {
 } from './styles';
 
 export function Login() {
+  const navigate = useNavigate();
   const schema = yup
     .object({
       email: yup.string().email('Formato Errado').required('Cade o email?'),
@@ -42,7 +44,14 @@ export function Login() {
       }),
       {
         pending: 'Aguarde',
-        success: 'Bem vindo',
+        success: {
+          render() {
+            setTimeout(() => {
+              navigate('/Home');
+            }, 2000);
+            return 'Seja bem vindo';
+          },
+        },
         error: 'Deu ruim filho',
       }
     );
