@@ -13,10 +13,10 @@ import {
   InputContainer,
   Title,
   Form,
-  Link,
   PasswordBox,
   ShowPasswordButton,
   Input,
+  Link,
 } from './styles';
 
 export function Login() {
@@ -83,7 +83,9 @@ export function Login() {
           </InputContainer>
           <InputContainer>
             <Button type="submit">Entrar</Button>
-            <Link>Ainda Não Tem uma Conta? please.</Link>
+            <p>
+              <Link to="../Cadrastro">Ainda Não Tem uma Conta? please. </Link>
+            </p>
           </InputContainer>
         </Form>
       </RightConteiner>

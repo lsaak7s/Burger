@@ -1,3 +1,4 @@
+import { Link as ReactLink } from 'react-router';
 import styled from 'styled-components';
 
 import fundo from '../../assets/fundo1.jpg';
@@ -116,12 +117,15 @@ export const Input = styled.input`
   border: 1px solid black;
   outline: none;
 `;
-export const Link = styled.button`
+export const p = styled.button`
   background-color: transparent;
   color: #000000;
 
-  border: none;
-
   font-size: 2vw;
   font-weight: 500;
+`;
+
+export const Link = styled(ReactLink)`
+  text-decoration: none;
+  color: #ffffff;
 `;

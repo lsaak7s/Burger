@@ -101,8 +101,10 @@ export function Cadrastro() {
             <p>{errors?.password?.message}</p>
           </InputContainer>
           <InputContainer>
-            <Button type="submit">Entrar</Button>
-            <Link>Já Tem uma Conta? please.</Link>
+            <Button type="submit">Criar</Button>
+            <p>
+              <Link to="../Login">Já Tem uma Conta? please.</Link>
+            </p>
           </InputContainer>
         </Form>
       </RightConteiner>
