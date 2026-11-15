@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -20,6 +21,7 @@ import {
 } from './styles';
 
 export function Cadrastro() {
+  const navigate = useNavigate();
   const schema = yup
     .object({
       name: yup.string().required('Cade o nome?'),
@@ -52,7 +54,11 @@ export function Cadrastro() {
     );
     try {
       if (status === 200 || status === 201) {
-        toast.success('Conta criada');
+        setTimeout(() => {
+          navigate('/Login');
+        }, 2000);
+
+        toast.success('Conta ja criada');
       } else if (status === 400) {
         toast.error('Conta ja criada');
       } else {
