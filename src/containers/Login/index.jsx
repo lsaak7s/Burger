@@ -37,25 +37,29 @@ export function Login() {
   });
 
   const onSubmit = async (data) => {
-    const res = await toast.promise(
-      api.post('/Login', {
-        email: data.email,
-        password: data.password,
-      }),
-      {
-        pending: 'Aguarde',
-        success: {
-          render() {
-            setTimeout(() => {
-              navigate('/Home');
-            }, 2000);
-            return 'Seja bem vindo';
+    try {
+      const res = await toast.promise(
+        api.post('/Login', {
+          email: data.email,
+          password: data.password,
+        }),
+        {
+          pending: 'Aguarde',
+          success: {
+            render() {
+              setTimeout(() => {
+                navigate('/Home');
+              }, 2000);
+              return 'Seja bem vindo';
+            },
           },
-        },
-        error: 'Deu ruim filho',
-      }
-    );
-    console.log(res);
+          error: 'Deu ruim filho',
+        }
+      );
+      console.error(res);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
