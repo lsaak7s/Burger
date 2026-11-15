@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
@@ -13,13 +14,14 @@ import {
   InputContainer,
   Title,
   Form,
-  Link,
   PasswordBox,
   ShowPasswordButton,
   Input,
+  Link,
 } from './styles';
 
 export function Login() {
+  const navigate = useNavigate();
   const schema = yup
     .object({
       email: yup.string().email('Formato Errado').required('Cade o email?'),
@@ -35,18 +37,29 @@ export function Login() {
   });
 
   const onSubmit = async (data) => {
-    const res = await toast.promise(
-      api.post('/Login', {
-        email: data.email,
-        password: data.password,
-      }),
-      {
-        pending: 'Aguarde',
-        success: 'Bem vindo',
-        error: 'Deu ruim filho',
-      }
-    );
-    console.log(res);
+    try {
+      const res = await toast.promise(
+        api.post('/Login', {
+          email: data.email,
+          password: data.password,
+        }),
+        {
+          pending: 'Aguarde',
+          success: {
+            render() {
+              setTimeout(() => {
+                navigate('/Home');
+              }, 2000);
+              return 'Seja bem vindo';
+            },
+          },
+          error: 'Deu ruim filho',
+        }
+      );
+      console.error(res);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
@@ -83,7 +96,9 @@ export function Login() {
           </InputContainer>
           <InputContainer>
             <Button type="submit">Entrar</Button>
-            <Link>Ainda Não Tem uma Conta? please.</Link>
+            <p>
+              <Link to="../Cadrastro">Ainda Não Tem uma Conta? please. </Link>
+            </p>
           </InputContainer>
         </Form>
       </RightConteiner>
