@@ -38,7 +38,9 @@ export function Login() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await toast.promise(
+      const {
+        data: { token },
+      } = await toast.promise(
         api.post('/Login', {
           email: data.email,
           password: data.password,
@@ -56,7 +58,7 @@ export function Login() {
           error: 'Deu ruim filho',
         }
       );
-      console.error(res);
+      localStorage.setItem('token', token);
     } catch (error) {
       console.error(error);
     }
