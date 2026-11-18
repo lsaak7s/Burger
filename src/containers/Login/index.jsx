@@ -58,11 +58,10 @@ export function Login() {
           error: 'Deu ruim filho',
         }
       );
-      console.error(token);
+      localStorage.setItem('token', token);
     } catch (error) {
       console.error(error);
     }
-    localStorage.setItem('token', token);
   };
 
   const [mostrarSenha, setMostrarSenha] = useState(false);
