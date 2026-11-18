@@ -7,9 +7,12 @@ export function Carousel() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     async function loadCategoris() {
-      const res = await api.get('/listCategories');
-      console.log(res);
+      const data = await api.get('/listCategories');
+
+      setCategories(data);
+      console.log(data);
     }
+
     loadCategoris();
   }, []);
 
