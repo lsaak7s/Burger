@@ -6,12 +6,12 @@ import 'react-multi-carousel/lib/styles.css';
 import { api } from '../../services/api';
 import { ContainerCarrocel, Title, ConteinerIteis } from './styles';
 
-export function CarouselConfig() {
+export function CarouselProducts() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     async function loadCategoris() {
-      const { data } = await api.get('/listCategories');
+      const { data } = await api.get('/listProducts');
       setCategories(data);
       console.log(data);
     }
@@ -47,7 +47,6 @@ export function CarouselConfig() {
   console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);
   return (
     <ContainerCarrocel>
-      <Title>ContainerCarrocel </Title>
       <Carousel
         responsive={responsive}
         infinite={true}

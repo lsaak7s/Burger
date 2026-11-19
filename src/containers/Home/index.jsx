@@ -1,5 +1,6 @@
-import { CarouselConfig } from '../../components/Carousel';
-import { Container, ContainerCarrocel } from './styles';
+import { CarouselCategory } from '../../components/CarouselCategory';
+import { CarouselProducts } from '../../components/CarouselProducts';
+import { Container, ContainerCarrocel, Title } from './styles';
 
 export function Home() {
   return (
@@ -9,10 +10,12 @@ export function Home() {
       </main>
       <ContainerCarrocel>
         <section>
-          <CarouselConfig />
+          <Title>Category </Title>
+          <CarouselCategory />
         </section>
         <section>
-          <h1>Produtos</h1>
+          <Title>Products </Title>
+          <CarouselProducts />
         </section>
       </ContainerCarrocel>
     </Container>

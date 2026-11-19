@@ -25,3 +25,4 @@ export const Container = styled.div`
   }
 `;
 export const ContainerCarrocel = styled.div``;
+export const Title = styled.h1``;
