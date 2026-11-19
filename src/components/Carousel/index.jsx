@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import Carousel from 'react-multi-carousel';
+import CarouselModule from 'react-multi-carousel';
+const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
@@ -43,10 +44,10 @@ export function CarouselConfig() {
     Carousel: typeof Carousel,
     ConteinerIteis: typeof ConteinerIteis,
   });
+  console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);
   return (
     <ContainerCarrocel>
-      <Title>ContainerCarrocel</Title>
-
+      <Title>ContainerCarrocel </Title>
       <Carousel
         responsive={responsive}
         infinite={true}
