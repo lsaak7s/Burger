@@ -16,7 +16,7 @@ export const Container = styled.div`
     /* Defina um tamanho menor para a imagem aparecer inteira */
     width: 100vw; /* Largura fixa (ou use porcentagem tipo 40vw) */
     height: 60vh; /* Altura fixa */
-    background: #937f7f;
+    background: #4b3636;
     background: url('${CartoonHome}') no-repeat center;
     background-size: contain; /* 'contain' faz a imagem inteira caber dentro da caixa sem cortar */
 

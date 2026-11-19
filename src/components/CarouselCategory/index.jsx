@@ -4,7 +4,7 @@ const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-import { ContainerCarrocel, ConteinerIteis } from './styles';
+import { ContainerCarrocel, ConteinerIteis, Title } from './styles';
 
 export function CarouselCategory() {
   const [categories, setCategories] = useState([]);
@@ -47,11 +47,12 @@ export function CarouselCategory() {
   console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);*/
   return (
     <ContainerCarrocel>
+      <Title>Category </Title>
       <Carousel
         responsive={responsive}
         infinite={true}
         partialVisbile={false}
-        itemClass="carousel-item"
+        itemClass="carousel"
       >
         {categories.map((category) => (
           <ConteinerIteis key={category.id} imageUrl={category.url}>

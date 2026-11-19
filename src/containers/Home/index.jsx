@@ -10,7 +10,6 @@ export function Home() {
       </main>
       <ContainerCarrocel>
         <section>
-          <Title>Category </Title>
           <CarouselCategory />
         </section>
         <section>
