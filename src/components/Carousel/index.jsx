@@ -37,7 +37,12 @@ export function CarouselConfig() {
       items: 1,
     },
   };
-
+  console.log({
+    ContainerCarrocel: typeof ContainerCarrocel,
+    Title: typeof Title,
+    Carousel: typeof Carousel,
+    ConteinerIteis: typeof ConteinerIteis,
+  });
   return (
     <ContainerCarrocel>
       <Title>ContainerCarrocel</Title>
