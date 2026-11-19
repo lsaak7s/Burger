@@ -4,6 +4,4 @@ export const ContainerCarrocel = styled.div``;
 
 export const Title = styled.h1``;
 
-export const Carousel = styled.div``;
-
 export const ConteinerIteis = styled.div``;
