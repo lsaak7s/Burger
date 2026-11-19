@@ -16,15 +16,32 @@ export const Container = styled.div`
 
     font-size: 25px;
   }
+`;
+export const P = styled.p`
+  width: 100vw;
+  height: 60vh;
 
-  h1 {
-    width: 100vw;
-    height: 60vh;
+  background: url('${CartoonHome}') no-repeat center;
+  background-size: contain;
 
-    background: url('${CartoonHome}') no-repeat center;
-    background-size: contain;
+  font-size: 40px;
+`;
+export const ContainerCarrocel = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
 
-    font-size: 40px;
+  .CarouselCategory {
+    width: 80vw;
+    height: 40vh;
+
+    /* AQUI ESTÁ O SEGREDO: Usamos o $imageUrl que vem do componente */
+    background: url('${(props) => props.$imageUrl}') no-repeat center;
+    background-size: cover; /* Faz a imagem esticar e preencher bonito sem esticar errado */
+
+    border-radius: 10px;
   }
 `;
-export const ContainerCarrocel = styled.div``;
