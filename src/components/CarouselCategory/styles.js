@@ -9,6 +9,7 @@ export const ContainerCarrocel = styled.div`
 export const Title = styled.h2`
   position: relative;
   text-align: center;
+  margin: 40px;
   &::after {
     content: '';
     width: 30px;
@@ -16,6 +17,7 @@ export const Title = styled.h2`
     bottom: 0;
     background-color: beige;
     position: absolute;
+
     left: calc(
       50% - 15px
     ); //Aqui faz a linha ficar no meio, faz a cabeca pensar
@@ -23,5 +25,5 @@ export const Title = styled.h2`
 `;
 
 export const ConteinerIteis = styled.div`
-  background: url('${(props) => props.imageUrl}');
+  background: url('${(props) => props.imageUrl}') no-repeat center;
 `;
