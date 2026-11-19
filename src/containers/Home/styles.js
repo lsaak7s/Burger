@@ -4,19 +4,27 @@ import CartoonHome from '../../assets/CartoonHome.jpg';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+
   min-height: 100vh;
   min-width: 100vh;
-  flex-direction: column;
-  /* Uma cor de fundo leve para destacar a imagem */
+
+  background-color: rgb(74, 70, 34);
+  header {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 25px;
+  }
 
   h1 {
     width: 100vw;
     height: 60vh;
+
     background: url('${CartoonHome}') no-repeat center;
     background-size: contain;
 
-    border-radius: 15px; /* Deixa as bordas arredondadas (opcional, fica bem legal) */
-    box-shadow: 0px 4px 10px rgba(56, 52, 52, 0.2); /* Cria uma sombra elegante */
+    font-size: 40px;
   }
 `;
 export const ContainerCarrocel = styled.div``;
