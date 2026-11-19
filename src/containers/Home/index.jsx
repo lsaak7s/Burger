@@ -1,4 +1,4 @@
-
+import { Carousel } from '../../components/Carousel';
 import { Container, ContainerCarrocel } from './styles';
 
 export function Home() {
