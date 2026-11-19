@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
     font-family: "Asset",serif ;
     font-weight:500;
+  
 
   }`;
 export default GlobalStyle;

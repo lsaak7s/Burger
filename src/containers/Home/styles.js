@@ -4,24 +4,44 @@ import CartoonHome from '../../assets/CartoonHome.jpg';
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
   flex-direction: column;
-  /* Uma cor de fundo leve para destacar a imagem */
 
-  main {
+  min-height: 100vh;
+  min-width: 100vh;
+
+  background-color: rgb(74, 70, 34);
+  header {
     display: flex;
-    justify-content: center;
-    align-items: end;
-    /* Defina um tamanho menor para a imagem aparecer inteira */
-    width: 100vw; /* Largura fixa (ou use porcentagem tipo 40vw) */
-    height: 60vh; /* Altura fixa */
-    background: #937f7f;
-    background: url('${CartoonHome}') no-repeat center;
-    background-size: contain; /* 'contain' faz a imagem inteira caber dentro da caixa sem cortar */
+    flex-direction: row;
 
-    border-radius: 15px; /* Deixa as bordas arredondadas (opcional, fica bem legal) */
-    box-shadow: 0px 4px 10px rgba(56, 52, 52, 0.2); /* Cria uma sombra elegante */
+    font-size: 25px;
   }
 `;
-export const ContainerCarrocel = styled.div``;
+export const P = styled.p`
+  width: 100vw;
+  height: 60vh;
+
+  background: url('${CartoonHome}') no-repeat center;
+  background-size: contain;
+
+  font-size: 40px;
+`;
+export const ContainerCarrocel = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+
+  .CarouselCategory {
+    width: 80vw;
+    height: 40vh;
+
+    /* AQUI ESTÁ O SEGREDO: Usamos o $imageUrl que vem do componente */
+    background: url('${(props) => props.$imageUrl}') no-repeat center;
+    background-size: cover; /* Faz a imagem esticar e preencher bonito sem esticar errado */
+
+    border-radius: 10px;
+  }
+`;

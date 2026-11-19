@@ -1,18 +1,28 @@
-
-import { Container, ContainerCarrocel } from './styles';
+import { CarouselCategory } from '../../components/CarouselCategory';
+import { Container, ContainerCarrocel, P } from './styles';
+//import { CarouselProducts } from '../../components/CarouselProducts';
 
 export function Home() {
   return (
     <Container>
+      <header>
+        <p>Home</p>
+        <p>Contatos</p>
+        <p>Ola</p>
+        <p>Pedidos</p>
+      </header>
+
       <main>
-        <h1>Home</h1>
+        <P>Bem vindo</P>
       </main>
+
       <ContainerCarrocel>
         <section>
-          <Carousel />
+          <CarouselCategory />
         </section>
+
         <section>
-          <h1>Produtos</h1>
+          <CarouselCategory />
         </section>
       </ContainerCarrocel>
     </Container>

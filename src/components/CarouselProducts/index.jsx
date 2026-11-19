@@ -1,25 +1,23 @@
 import { useState, useEffect } from 'react';
-import Carousell from 'react-multi-carousel';
+import CarouselModule from 'react-multi-carousel';
+const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-import { ContainerCarrocel, Title, ConteinerIteis } from './styles';
+import { ContainerCarrocel, ConteinerIteis } from './styles';
 
-export function Carousel() {
+export function CarouselProducts() {
   const [categories, setCategories] = useState([]);
-  useEffect(
-    () => {
-      async function loadCategoris() {
-        const data = await api.get('/listCategories');
 
-        setCategories(data);
-        console.log(data);
-      }
+  useEffect(() => {
+    async function loadCategoris() {
+      const { data } = await api.get('/listProducts');
+      setCategories(data);
+      console.log(data);
+    }
 
-      loadCategoris();
-    },
-    [] /*Aqui diz que e para rodar somente uma vez AAAAAAAAAAAAAAAAAAAAAA */
-  );
+    loadCategoris();
+  }, []);
 
   const responsive = {
     superLargeDesktop: {
@@ -40,22 +38,25 @@ export function Carousel() {
       items: 1,
     },
   };
-
+  /*console.log({
+    ContainerCarrocel: typeof ContainerCarrocel,
+    Title: typeof Title,
+    Carousel: typeof Carousel,
+    ConteinerIteis: typeof ConteinerIteis,
+  });
+  console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);*/
   return (
     <ContainerCarrocel>
-      <Title>ContainerCarrocel</Title>
-
-      <Carousell
+      <Carousel
         responsive={responsive}
         infinite={true}
         partialVisbile={false}
         itemClass="carousel-item"
       >
-        {' '}
         {categories.map((category) => (
-          <ConteinerIteis key={category.id}>{category.name}</ConteinerIteis>
+          <ConteinerIteis key={category.id}>{category.name},</ConteinerIteis>
         ))}
-      </Carousell>
+      </Carousel>
     </ContainerCarrocel>
   );
 }
