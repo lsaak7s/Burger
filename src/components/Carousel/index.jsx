@@ -7,19 +7,16 @@ import { ContainerCarrocel, Title, ConteinerIteis } from './styles';
 
 export function CarouselConfig() {
   const [categories, setCategories] = useState([]);
-  useEffect(
-    () => {
-      async function loadCategoris() {
-        const data = await api.get('/listCategories');
 
-        setCategories(data);
-        console.log(data);
-      }
+  useEffect(() => {
+    async function loadCategoris() {
+      const data = await api.get('/listCategories');
+      setCategories(data);
+      console.log(data);
+    }
 
-      loadCategoris();
-    },
-    [] /*Aqui diz que e para rodar somente uma vez AAAAAAAAAAAAAAAAAAAAAA */
-  );
+    loadCategoris();
+  }, []);
 
   const responsive = {
     superLargeDesktop: {
@@ -49,7 +46,7 @@ export function CarouselConfig() {
         responsive={responsive}
         infinite={true}
         partialVisbile={false}
-        itemClass="carousel-item"
+        //itemClass="carousel-item"
       >
         {categories.map((category) => (
           <ConteinerIteis key={category.id}>{category.name}</ConteinerIteis>

@@ -4,8 +4,8 @@ import CartoonHome from '../../assets/CartoonHome.jpg';
 
 export const Container = styled.div`
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100vh;
   flex-direction: column;
   /* Uma cor de fundo leve para destacar a imagem */
 
