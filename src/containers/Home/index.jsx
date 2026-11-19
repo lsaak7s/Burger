@@ -1,4 +1,4 @@
-import { Carousel } from '../../components/Carousel';
+import { CarouselConfig } from '../../components/Carousel';
 import { Container, ContainerCarrocel } from './styles';
 
 export function Home() {
@@ -9,7 +9,7 @@ export function Home() {
       </main>
       <ContainerCarrocel>
         <section>
-          <Carousel />
+          <CarouselConfig />
         </section>
         <section>
           <h1>Produtos</h1>

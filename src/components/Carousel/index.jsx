@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import Carousell from 'react-multi-carousel';
+import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
 import { ContainerCarrocel, Title, ConteinerIteis } from './styles';
 
-export function Carousel() {
+export function CarouselConfig() {
   const [categories, setCategories] = useState([]);
   useEffect(
     () => {
@@ -45,17 +45,16 @@ export function Carousel() {
     <ContainerCarrocel>
       <Title>ContainerCarrocel</Title>
 
-      <Carousell
+      <Carousel
         responsive={responsive}
         infinite={true}
         partialVisbile={false}
         itemClass="carousel-item"
       >
-        {' '}
         {categories.map((category) => (
           <ConteinerIteis key={category.id}>{category.name}</ConteinerIteis>
         ))}
-      </Carousell>
+      </Carousel>
     </ContainerCarrocel>
   );
 }
