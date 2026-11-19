@@ -4,7 +4,7 @@ const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-import { ContainerCarrocel, Title, ConteinerIteis } from './styles';
+import { ContainerCarrocel, ConteinerIteis } from './styles';
 
 export function CarouselCategory() {
   const [categories, setCategories] = useState([]);
@@ -38,13 +38,13 @@ export function CarouselCategory() {
       items: 1,
     },
   };
-  console.log({
+  /*console.log({
     ContainerCarrocel: typeof ContainerCarrocel,
     Title: typeof Title,
     Carousel: typeof Carousel,
     ConteinerIteis: typeof ConteinerIteis,
   });
-  console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);
+  console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);*/
   return (
     <ContainerCarrocel>
       <Carousel
