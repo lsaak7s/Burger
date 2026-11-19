@@ -10,7 +10,7 @@ export function CarouselConfig() {
 
   useEffect(() => {
     async function loadCategoris() {
-      const data = await api.get('/listCategories');
+      const { data } = await api.get('/listCategories');
       setCategories(data);
       console.log(data);
     }
@@ -46,7 +46,7 @@ export function CarouselConfig() {
         responsive={responsive}
         infinite={true}
         partialVisbile={false}
-        //itemClass="carousel-item"
+        itemClass="carousel-item"
       >
         {categories.map((category) => (
           <ConteinerIteis key={category.id}>{category.name}</ConteinerIteis>
