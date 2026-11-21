@@ -1,47 +1,45 @@
 import styled from 'styled-components';
 
-import CartoonHome from '../../assets/CartoonHome.jpg';
+import fundo3 from '../../assets/fundo3.jpg';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
-  min-width: 100vh;
+  width: 100%;
+  background: url('${fundo3}');
 
-  background-color: rgb(74, 70, 34);
+  //background-color: rgb(117, 50, 50);
   header {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    background: rgba(7, 7, 7, 0.2);
+    padding: 20px;
+    gap: 20px;
+  }
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-size: 60px;
+    font-weight: 600;
 
-    font-size: 25px;
+    color: rgb(0, 0, 0);
+  }
+  .p {
+    font-size: 35px;
+    font-weight: 600;
   }
 `;
-export const P = styled.p`
-  width: 100vw;
-  height: 60vh;
 
-  background: url('${CartoonHome}') no-repeat center;
-  background-size: contain;
-
-  font-size: 40px;
-`;
-export const ContainerCarrocel = styled.div`
+export const ContainerCel = styled.div`
   width: 100%;
-  display: flex;
+  max-width: 100vw;
+
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  padding: 20px 0;
 
-  .CarouselCategory {
-    width: 80vw;
-    height: 40vh;
-
-    /* AQUI ESTÁ O SEGREDO: Usamos o $imageUrl que vem do componente */
-    background: url('${(props) => props.$imageUrl}') no-repeat center;
-    background-size: cover; /* Faz a imagem esticar e preencher bonito sem esticar errado */
-
-    border-radius: 10px;
-  }
+  padding: 20px;
 `;
