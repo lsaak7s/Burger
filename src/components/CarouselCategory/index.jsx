@@ -49,7 +49,12 @@ export function CarouselCategory() {
   return (
     <ContainerCarrocel>
       <Title>Categorias</Title>
-      <Carousel responsive={responsive} infinite={true}>
+
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        itemClass="carousel-item" // Adicione uma classe para ajudar no espaçamento
+      >
         {categories &&
           categories.map((category) => (
             <ContainerIteis key={category.id} imageUrl={category.url}>
