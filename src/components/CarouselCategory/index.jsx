@@ -48,19 +48,14 @@ export function CarouselCategory() {
   console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);*/
   return (
     <ContainerCarrocel>
-      <Title>Category </Title>
-      <Carousel
-        responsive={responsive}
-        infinite={true}
-        partialVisbile={false}
-        itemClass="carousel"
-      >
-        {categories.map((category) => (
-          <ContainerIteis key={category.id} imageUrl={category.url}>
-            <p></p>
-            {category.name}
-          </ContainerIteis>
-        ))}
+      <Title>Categorias</Title>
+      <Carousel responsive={responsive} infinite={true}>
+        {categories &&
+          categories.map((category) => (
+            <ContainerIteis key={category.id} imageUrl={category.url}>
+              <p>{category.name}</p>
+            </ContainerIteis>
+          ))}
       </Carousel>
     </ContainerCarrocel>
   );

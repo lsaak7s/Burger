@@ -1,5 +1,5 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
-import { Container, Containercel } from './styles';
+import { Container, ContainerCel, CartoonImage } from './styles';
 //import { CarouselProducts } from '../../components/CarouselProducts';
 
 export function Home() {
@@ -14,13 +14,14 @@ export function Home() {
 
       <main>
         <h2>Bem vindo</h2>
+        <CartoonImage />
       </main>
 
-      <Containercel>
+      <ContainerCel>
         <section>
           <CarouselCategory />
         </section>
-      </Containercel>
+      </ContainerCel>
     </Container>
   );
 }

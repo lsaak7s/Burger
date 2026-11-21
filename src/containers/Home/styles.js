@@ -5,48 +5,40 @@ import CartoonHome from '../../assets/CartoonHome.jpg';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   min-height: 100vh;
-  min-width: 100vh;
-
+  width: 100%;
   background-color: rgb(124, 117, 52);
   header {
     display: flex;
     flex-direction: row;
-
+    justify-content: center; /* Centraliza os itens do menu */
+    gap: 20px; /* Espaço entre Home, Contatos, Pedidos */
     background-color: rgb(88, 88, 85);
-
-    font-size: 20px;
+    padding: 20px;
+    color: white;
   }
   h2 {
-    width: 100vw;
-    height: 60vh;
-
-    background: url('${CartoonHome}') no-repeat center;
-    background-size: contain;
-    background-color: rgb(194, 194, 130);
+    margin: 20px 0;
+    text-align: center;
     font-size: 40px;
+    margin: 20px 0;
+    color: white;
   }
 `;
-
-export const Containercel = styled.div`
+export const CartoonImage = styled.div`
   width: 100%;
+  height: 400px; /* Ajuste a altura como quiser */
+  background: url('${CartoonHome}') no-repeat center;
+  background-size: contain;
+`;
+export const ContainerCel = styled.div`
+  width: 100%; // Garante que não passe da tela
+  max-width: 100vw; // Proteção extra contra transbordamento
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   padding: 20px 0;
-  .section {
-    .CarouselCategory {
-      width: 80vw;
-      height: 40vh;
-
-      background:
-        url('${(props) => props.$imageUrl}'),
-        no-repeat center;
-      background-size: cover;
-
-      border-radius: 10px;
-    }
-  }
+  background-color: rgb(124, 117, 52);
+  overflow-x: hidden; // <--- ISSO É O QUE CORTA O QUE PASSA PARA OS LADOS
 `;
