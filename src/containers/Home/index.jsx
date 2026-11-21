@@ -8,8 +8,8 @@ export function Home() {
       <header>
         <h1>Burger</h1>
         <p className="p">Pedidos</p>
-        <p>Contatos</p>
-        <p>Conta</p>
+        <p className="p">Contatos</p>
+        <p className="p">Conta</p>
       </header>
 
       <main>

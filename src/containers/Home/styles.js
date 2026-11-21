@@ -19,7 +19,10 @@ export const Container = styled.div`
     gap: 20px;
   }
   h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
     font-size: 60px;
     font-weight: 600;
 
