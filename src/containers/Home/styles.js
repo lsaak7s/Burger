@@ -41,11 +41,10 @@ export const Containercel = styled.div`
       width: 80vw;
       height: 40vh;
 
-      /* AQUI ESTÁ O SEGREDO: Usamos o $imageUrl que vem do componente */
       background:
         url('${(props) => props.$imageUrl}'),
         no-repeat center;
-      background-size: cover; /* Faz a imagem esticar e preencher bonito sem esticar errado */
+      background-size: cover;
 
       border-radius: 10px;
     }

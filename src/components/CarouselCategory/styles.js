@@ -24,6 +24,10 @@ export const Title = styled.h2`
   }
 `;
 
-export const ConteinerIteis = styled.div`
+export const ContainerIteis = styled.div`
   background: url('${(props) => props.imageUrl}') no-repeat center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 `;
