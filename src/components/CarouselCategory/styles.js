@@ -16,16 +16,18 @@ export const ContainerCarrocel = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: 32px;
-  color: white;
+  font-size: 45px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+
   margin-bottom: 40px;
   position: relative;
 
   &::after {
     content: '';
-    width: 50px;
+    width: 100px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: rgb(0, 0, 0);
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -44,19 +46,19 @@ export const ContainerIteis = styled.div`
 
   width: 280px;
   height: 280px;
-  border-radius: 20px;
+  border-radius: 60px;
   margin: 0 auto; /* Centraliza o card dentro do slide */
 
   p {
-    background: rgba(0, 0, 0, 0.7); /* Corrigido para uma linha só */
+    background: rgba(0, 0, 0, 0.5); /* Corrigido para uma linha só */
+    border-radius: 15px;
     color: white;
-    width: 100%;
+    width: 60%;
     text-align: center;
+    margin-bottom: 10px;
     padding: 12px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     margin-top: auto; /* Joga o texto para a base do card */
   }
 `;

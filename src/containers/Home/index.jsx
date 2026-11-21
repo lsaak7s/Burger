@@ -1,27 +1,27 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
-import { Container, ContainerCel, CartoonImage } from './styles';
+import { Container, ContainerCel } from './styles';
 //import { CarouselProducts } from '../../components/CarouselProducts';
 
 export function Home() {
   return (
     <Container>
       <header>
-        <p>Home</p>
+        <h1>Burger</h1>
+        <p className="p">Pedidos</p>
         <p>Contatos</p>
-        <p>Ola</p>
-        <p>Pedidos</p>
+        <p>Conta</p>
       </header>
 
       <main>
-        <h2>Bem vindo</h2>
-        <CartoonImage />
+        <ContainerCel>
+          <section>
+            <CarouselCategory />
+          </section>
+          <section>
+            <CarouselCategory />
+          </section>
+        </ContainerCel>
       </main>
-
-      <ContainerCel>
-        <section>
-          <CarouselCategory />
-        </section>
-      </ContainerCel>
     </Container>
   );
 }
