@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import fundo from '../../assets/fundo.png';
 import logo from '../../assets/fundo4.jpg';
 
 const weight = 600;
@@ -10,7 +9,7 @@ export const ContainerHeader = styled.div`
   flex-direction: column;
 
   min-height: 100vh;
-  width: 100%;
+  min-width: 100%;
 
   header {
     display: flex;
@@ -28,31 +27,39 @@ export const ContainerHeader = styled.div`
     font-size: 35px;
 
     color: rgb(255, 255, 255);
+
+    &::after {
+      content: '';
+      width: 3px;
+      height: 40px;
+
+      margin-left: 8px;
+
+      position: absolute;
+
+      background-color: rgb(255, 255, 255);
+    }
   }
   .Img {
     width: 100%;
     height: 100vh;
-
-    background: url('${fundo} ') no-repeat center;
-    background-size: cover;
   }
   main {
     background: url('${logo}');
-    background-size: cover; /* Cobre tudo sem distorcer */
-    background-position: center; /* Foca no meio da foto (no hambúrguer) */
-    width: 100%; /* Ocupa a largura total */
-    height: 500px; /* Altura igual à da foto de referência */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
 
-    display: flex; /* Ativa o modo flex para posicionar o texto */
-    align-items: center; /* Centraliza o texto verticalmente */
-    justify-content: flex-end; /* Joga o texto para o lado direito */
-    padding-right: 10%; /* Dá uma margem da borda direita */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
 
     h1 {
-      font-family: 'Road Rage', cursive; /* Nome daquela fonte estilizada */
-      color: #ffffff;
+      font-family: 'Road Rage', cursive;
       font-size: 80px;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para ler melhor */
+      color: rgb(255, 255, 255);
     }
   }
 `;
