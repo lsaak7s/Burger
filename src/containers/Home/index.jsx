@@ -6,11 +6,13 @@ export function Home() {
   return (
     <Container>
       <header>
-        <h1>Burger</h1>
         <p className="p">Pedidos</p>
         <p className="p">Contatos</p>
         <p className="p">Conta</p>
       </header>
+      <main>
+        <h1 className="Img">Burger</h1>
+      </main>
 
       <main>
         <ContainerCel>
