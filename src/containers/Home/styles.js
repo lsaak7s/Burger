@@ -1,45 +1,94 @@
 import styled from 'styled-components';
 
-import fundo3 from '../../assets/fundo3.jpg';
+import logo from '../../assets/fundo4.jpg';
 
-export const Container = styled.div`
+const weight = 600;
+export const Header = styled.header`
+  display: flex;
+  justify-content: center; /* Joga o logo pra esquerda e o menu pra direita */
+  align-items: center; /* Alinha tudo verticalmente no centro */
+
+  width: 100%;
+
+  padding: 20px 50px; /* Dá um respiro nas laterais */
+
+  background-color: rgb(26, 26, 26); /* Cor escura como na foto */
+`;
+
+export const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+
+  gap: 30px; /* Espaço entre cada link */
+`;
+
+export const ContainerHeader = styled.div`
   display: flex;
   flex-direction: column;
+
   min-height: 100vh;
-  width: 100%;
-  background: url('${fundo3}');
+  min-width: 100%;
 
-  //background-color: rgb(117, 50, 50);
-  header {
+  .uteis {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background: rgba(7, 7, 7, 0.2);
-    padding: 20px;
-    gap: 20px;
-  }
-  h1 {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 20px;
-    font-size: 60px;
-    font-weight: 600;
+    position: relative; /* ESSENCIAL para a linha ::after funcionar */
+    align-items: center;
 
-    color: rgb(0, 0, 0);
+    font-size: 30px; /* 35px era muito grande, na foto é menor */
+    font-weight: ${weight};
+
+    color: rgb(255, 255, 255);
+
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+
+      width: 1px; /* Linha fininha como na foto */
+      height: 20px; /* Altura da linha */
+
+      right: -15px; /* Coloca a linha depois do texto */
+      top: 50%; /* Centraliza verticalmente */
+
+      transform: translateY(-50%); /* Ajuste fino de centralização */
+
+      background-color: rgb(255, 255, 255);
+    }
+
+    /* Remove a linha do último item para ficar igual à foto */
+    &:last-child::after {
+      display: none;
+    }
   }
-  .p {
-    font-size: 35px;
-    font-weight: 600;
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 500px;
+    padding-right: 10%;
+
+    background: url('${logo}');
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      font-size: 80px;
+      font-weight: ${weight};
+      color: rgb(255, 255, 255);
+    }
   }
 `;
 
-export const ContainerCel = styled.div`
-  width: 100%;
-  max-width: 100vw;
-
+export const CarouselContainer = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
+
+  min-width: 100%;
 
   padding: 20px;
 `;

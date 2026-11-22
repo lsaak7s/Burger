@@ -38,15 +38,15 @@ export const Title = styled.h2`
 export const ContainerIteis = styled.div`
   display: flex;
   flex-direction: column; /* Fundamental para o margin-top: auto funcionar */
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
 
   background: url('${(props) => props.imageUrl}') no-repeat center;
   background-size: cover;
 
   width: 280px;
   height: 280px;
-  border-radius: 60px;
+  border-radius: 30px;
   margin: 0 auto; /* Centraliza o card dentro do slide */
 
   p {
@@ -58,7 +58,7 @@ export const ContainerIteis = styled.div`
     margin-bottom: 10px;
     padding: 12px;
     font-size: 17px;
-    font-weight: bold;
+
     margin-top: auto; /* Joga o texto para a base do card */
   }
 `;
