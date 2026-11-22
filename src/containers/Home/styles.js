@@ -35,17 +35,25 @@ export const ContainerHeader = styled.div`
 
     background: url('${fundo} ') no-repeat center;
     background-size: cover;
-    background-position: center;
   }
   main {
-    width: 100%;
-    height: 480px;
+    background: url('${logo}');
+    background-size: cover; /* Cobre tudo sem distorcer */
+    background-position: center; /* Foca no meio da foto (no hambúrguer) */
+    width: 100%; /* Ocupa a largura total */
+    height: 500px; /* Altura igual à da foto de referência */
 
-    background: url('${logo} ') no-repeat center;
-    background-size: cover;
-    background-position: center;
+    display: flex; /* Ativa o modo flex para posicionar o texto */
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: flex-end; /* Joga o texto para o lado direito */
+    padding-right: 10%; /* Dá uma margem da borda direita */
 
-    padding-right: 150px;
+    h1 {
+      font-family: 'Road Rage', cursive; /* Nome daquela fonte estilizada */
+      color: #ffffff;
+      font-size: 80px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para ler melhor */
+    }
   }
 `;
 
