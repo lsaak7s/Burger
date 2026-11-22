@@ -58,7 +58,7 @@ export const ContainerIteis = styled.div`
     margin-bottom: 10px;
     padding: 12px;
     font-size: 17px;
-    font-weight: bold;
+
     margin-top: auto; /* Joga o texto para a base do card */
   }
 `;

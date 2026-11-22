@@ -6,19 +6,15 @@ export function Home() {
   return (
     <Container>
       <header>
-        <p className="p">Pedidos</p>
-        <p className="p">Contatos</p>
-        <p className="p">Conta</p>
+        <h1 className="uteis">Burger</h1>
+        <p className="uteis">Pedidos</p>
+        <p className="uteis">Contatos</p>
+        <p className="uteis">Conta</p>
       </header>
-      <main>
-        <h1 className="Img">Burger</h1>
-      </main>
 
-      <main>
+      <main className="Img">
+        <h1 className="wellcome">Burger</h1>
         <ContainerCel>
-          <section>
-            <CarouselCategory />
-          </section>
           <section>
             <CarouselCategory />
           </section>
