@@ -5,12 +5,12 @@ import logo from '../../assets/fundo4.jpg';
 
 const weight = 600;
 
-export const Container = styled.div`
+export const ContainerHeader = styled.div`
   display: flex;
   flex-direction: column;
 
   min-height: 100vh;
-  min-width: 100%;
+  width: 100%;
 
   header {
     display: flex;
@@ -30,22 +30,31 @@ export const Container = styled.div`
     color: rgb(255, 255, 255);
   }
   .Img {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 
     background: url('${fundo} ') no-repeat center;
     background-size: cover;
-
     background-position: center;
+  }
+  main {
+    width: 100%;
+    height: 480px;
+
+    background: url('${logo} ') no-repeat center;
+    background-size: cover;
+    background-position: center;
+
+    padding-right: 150px;
   }
 `;
 
-export const ContainerCel = styled.div`
-  min-width: 100vw;
-
+export const CarouselContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  min-width: 100%;
 
   padding: 20px;
 `;
