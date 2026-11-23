@@ -4,7 +4,6 @@ const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-// Deve estar exatamente assim, inclusive com as chaves {}
 import { ContainerCarrocel, Title, ContainerIteis } from './styles';
 
 export function CarouselCategory() {

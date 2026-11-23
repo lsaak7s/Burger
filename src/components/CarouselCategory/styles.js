@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+const weight = 700;
+
 export const ContainerCarrocel = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,9 +10,6 @@ export const ContainerCarrocel = styled.div`
   width: 100%;
   max-width: 1280px;
 
-  margin: 0 auto;
-  padding: 40px 0;
-
   .react-multi-carousel-list {
     width: 100%;
   }
@@ -18,38 +17,39 @@ export const ContainerCarrocel = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: 45px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: ${weight};
 
-  margin-bottom: 40px;
+  margin: 30px;
   position: relative;
 
-  color: rgb(0, 0, 0);
+  color: rgb(26, 26, 26);
   &::after {
     content: '';
     width: 100px;
     height: 3px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
     bottom: -10px;
+
     left: 50%;
     transform: translateX(-50%);
+
+    position: absolute;
+
+    background-color: rgb(26, 26, 26);
   }
 `;
 
 export const ContainerIteis = styled.div`
   display: flex;
-  flex-direction: column; /* Fundamental para o margin-top: auto funcionar */
-  align-items: start;
-  justify-content: start;
+  flex-direction: row;
 
   background: url('${(props) => props.imageUrl}') no-repeat center;
   background-size: cover;
 
-  width: 280px;
-  height: 240px;
+  width: 310px;
+  height: 260px;
 
-  border-radius: 20px;
+  border-radius: 15px;
 
   margin-top: 0 auto;
   padding: 10px;
