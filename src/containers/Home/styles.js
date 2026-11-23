@@ -106,4 +106,8 @@ export const FooterContainer = styled.div`
 
     color: rgb(255, 255, 255);
   }
+  span {
+    font-weight: ${weight};
+    color: rgb(7, 188, 12);
+  }
 `;

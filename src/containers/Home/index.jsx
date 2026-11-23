@@ -23,7 +23,7 @@ export function Home() {
         <h1>Bem-vindo!</h1>
       </main>
 
-      <CarouselContainer className="Img">
+      <CarouselContainer>
         <section>
           <CarouselCategory />
         </section>
@@ -31,7 +31,8 @@ export function Home() {
       <FooterContainer>
         <footer>
           <p>
-            HTTP 200 OK: Fome resolvida com sucesso! • Desenvolvido por lsaak7s
+            HTTP <span>200 OK</span>: Fome resolvida com sucesso! • Desenvolvido
+            por lsaak7s
           </p>
         </footer>
       </FooterContainer>

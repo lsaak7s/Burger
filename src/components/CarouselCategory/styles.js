@@ -46,11 +46,13 @@ export const ContainerIteis = styled.div`
 
   width: 280px;
   height: 280px;
-  border-radius: 30px;
-  margin: 0 auto; /* Centraliza o card dentro do slide */
+
+  border-radius: 20px;
+
+  margin: 0 10px; /* Centraliza o card dentro do slide */
 
   p {
-    background: rgba(0, 0, 0, 0.5); /* Corrigido para uma linha só */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     color: white;
     width: 60%;
