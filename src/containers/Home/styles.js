@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logo from '../../assets/fundo4.jpg';
 
 const weight = 600;
+
 export const Header = styled.header`
   display: flex;
   justify-content: center; /* Joga o logo pra esquerda e o menu pra direita */
@@ -20,15 +21,6 @@ export const Nav = styled.nav`
   align-items: center;
 
   gap: 30px; /* Espaço entre cada link */
-`;
-
-export const ContainerHeader = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
-  min-width: 100%;
-
   .uteis {
     display: flex;
     position: relative; /* ESSENCIAL para a linha ::after funcionar */
@@ -61,6 +53,14 @@ export const ContainerHeader = styled.div`
       display: none;
     }
   }
+`;
+
+export const ContainerHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  min-width: 100%;
 
   main {
     display: flex;
@@ -72,6 +72,7 @@ export const ContainerHeader = styled.div`
     padding-right: 10%;
 
     background: url('${logo}');
+
     background-size: cover;
     background-position: center;
 

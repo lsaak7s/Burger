@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
+const weight = 700;
+
 export const ContainerCarrocel = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  max-width: 1280px;
 
   .react-multi-carousel-list {
     width: 100%;
@@ -16,49 +17,57 @@ export const ContainerCarrocel = styled.div`
 
 export const Title = styled.h2`
   text-align: center;
-  font-size: 45px;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
+  font-size: 60px;
+  font-weight: ${weight};
 
-  margin-bottom: 40px;
+  margin: 30px;
   position: relative;
 
+  color: rgb(26, 26, 26);
   &::after {
     content: '';
     width: 100px;
     height: 3px;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
     bottom: -10px;
+
     left: 50%;
     transform: translateX(-50%);
+
+    position: absolute;
+
+    background-color: rgb(26, 26, 26);
   }
 `;
 
 export const ContainerIteis = styled.div`
   display: flex;
-  flex-direction: column; /* Fundamental para o margin-top: auto funcionar */
-  align-items: start;
-  justify-content: start;
+  flex-direction: row;
 
   background: url('${(props) => props.imageUrl}') no-repeat center;
   background-size: cover;
 
-  width: 280px;
-  height: 280px;
-  border-radius: 30px;
-  margin: 0 auto; /* Centraliza o card dentro do slide */
+  width: 310px;
+  height: 260px;
+
+  border-radius: 15px;
+
+  margin-top: 0 auto;
+  padding: 10px;
 
   p {
-    background: rgba(0, 0, 0, 0.5); /* Corrigido para uma linha só */
-    border-radius: 15px;
-    color: white;
     width: 60%;
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 12px;
-    font-size: 17px;
 
-    margin-top: auto; /* Joga o texto para a base do card */
+    margin: 10px;
+    padding: 12px;
+
+    margin-top: auto;
+
+    border-radius: 15px;
+
+    font-size: 17px;
+    text-align: center;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
   }
 `;
