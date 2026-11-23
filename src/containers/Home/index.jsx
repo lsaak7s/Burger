@@ -1,12 +1,18 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
-import { ContainerHeader, CarouselContainer, Header, Nav } from './styles';
+import {
+  ContainerHeader,
+  Header,
+  Nav,
+  CarouselContainer,
+  FooterContainer,
+} from './styles';
 
 export function Home() {
   return (
     <ContainerHeader>
       <Header>
         <Nav>
-          <span className="uteis">Home</span>
+          <span className="uteis">Burger</span>
           <span className="uteis">Pedidos</span>
           <span className="uteis">Contatos</span>
           <span className="uteis">Conta</span>
@@ -22,6 +28,9 @@ export function Home() {
           <CarouselCategory />
         </section>
       </CarouselContainer>
+      <FooterContainer>
+        <footer></footer>
+      </FooterContainer>
     </ContainerHeader>
   );
 }
