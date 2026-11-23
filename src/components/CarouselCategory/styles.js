@@ -44,23 +44,27 @@ export const ContainerIteis = styled.div`
   background: url('${(props) => props.imageUrl}') no-repeat center;
   background-size: cover;
 
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 240px;
 
   border-radius: 20px;
 
-  margin: 0 10px; /* Centraliza o card dentro do slide */
+  margin: 0 10px;
 
   p {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    color: white;
     width: 60%;
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 12px;
-    font-size: 17px;
 
-    margin-top: auto; /* Joga o texto para a base do card */
+    margin: 10px;
+    padding: 12px;
+
+    margin-top: auto;
+
+    border-radius: 15px;
+
+    font-size: 17px;
+    text-align: center;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
   }
 `;

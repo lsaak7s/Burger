@@ -72,6 +72,7 @@ export const ContainerHeader = styled.div`
     padding-right: 10%;
 
     background: url('${logo}');
+
     background-size: cover;
     background-position: center;
 
@@ -91,23 +92,4 @@ export const CarouselContainer = styled.div`
   min-width: 100%;
 
   padding: 20px;
-`;
-export const FooterContainer = styled.div`
-  width: 100%;
-  padding: 10px 20px;
-
-  background-color: rgb(26, 26, 26);
-
-  p {
-    font-size: 15px;
-    font-weight: ${weight};
-
-    text-align: center;
-
-    color: rgb(255, 255, 255);
-  }
-  span {
-    font-weight: ${weight};
-    color: rgb(7, 188, 12);
-  }
 `;

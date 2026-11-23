@@ -1,11 +1,6 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
-import {
-  ContainerHeader,
-  Header,
-  Nav,
-  CarouselContainer,
-  FooterContainer,
-} from './styles';
+import { Footeer } from '../../components/footer';
+import { ContainerHeader, Header, Nav, CarouselContainer } from './styles';
 
 export function Home() {
   return (
@@ -28,14 +23,9 @@ export function Home() {
           <CarouselCategory />
         </section>
       </CarouselContainer>
-      <FooterContainer>
-        <footer>
-          <p>
-            HTTP <span>200 OK</span>: Fome resolvida com sucesso! • Desenvolvido
-            por lsaak7s
-          </p>
-        </footer>
-      </FooterContainer>
+      <footer>
+        <Footeer />
+      </footer>
     </ContainerHeader>
   );
 }
