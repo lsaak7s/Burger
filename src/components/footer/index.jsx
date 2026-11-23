@@ -1,6 +1,6 @@
 import { FooterContainer } from '.styles';
 
-export function Footeer() {
+export function Footer() {
   return (
     <FooterContainer>
       <p>

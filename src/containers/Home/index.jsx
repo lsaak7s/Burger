@@ -1,5 +1,5 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
-import { Footeer } from '../../components/footer';
+import { Footer } from '../../components/footer';
 import { ContainerHeader, Header, Nav, CarouselContainer } from './styles';
 
 export function Home() {
@@ -23,9 +23,7 @@ export function Home() {
           <CarouselCategory />
         </section>
       </CarouselContainer>
-      <footer>
-        <Footeer />
-      </footer>
+      <Footer />
     </ContainerHeader>
   );
 }
