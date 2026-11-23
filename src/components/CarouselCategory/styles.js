@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const ContainerCarrocel = styled.div`
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 40px 0;
 
   .react-multi-carousel-list {
     width: 100%;
@@ -18,11 +20,11 @@ export const Title = styled.h2`
   text-align: center;
   font-size: 45px;
   font-weight: 600;
-  color: rgb(0, 0, 0);
 
   margin-bottom: 40px;
   position: relative;
 
+  color: rgb(0, 0, 0);
   &::after {
     content: '';
     width: 100px;
@@ -44,12 +46,13 @@ export const ContainerIteis = styled.div`
   background: url('${(props) => props.imageUrl}') no-repeat center;
   background-size: cover;
 
-  width: 300px;
+  width: 280px;
   height: 240px;
 
   border-radius: 20px;
 
-  margin: 0 10px;
+  margin-top: 0 auto;
+  padding: 10px;
 
   p {
     width: 60%;
