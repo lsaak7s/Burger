@@ -94,6 +94,16 @@ export const CarouselContainer = styled.div`
 `;
 export const FooterContainer = styled.div`
   width: 100%;
-  padding: 20px 50px;
+  padding: 10px 20px;
+
   background-color: rgb(26, 26, 26);
+
+  p {
+    font-size: 15px;
+    font-weight: ${weight};
+
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+  }
 `;

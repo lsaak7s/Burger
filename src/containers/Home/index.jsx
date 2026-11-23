@@ -29,7 +29,11 @@ export function Home() {
         </section>
       </CarouselContainer>
       <FooterContainer>
-        <footer></footer>
+        <footer>
+          <p>
+            HTTP 200 OK: Fome resolvida com sucesso! • Desenvolvido por lsaak7s
+          </p>
+        </footer>
       </FooterContainer>
     </ContainerHeader>
   );
