@@ -13,7 +13,6 @@ export function CarouselCategory() {
     async function loadCategoris() {
       const { data } = await api.get('/listCategories');
       setCategories(data);
-      console.log(data);
     }
 
     loadCategoris();
@@ -49,7 +48,11 @@ export function CarouselCategory() {
     <ContainerCarrocel>
       <Title>Categorias</Title>
 
-      <Carousel responsive={responsive} infinite={true}>
+      <Carousel
+        responsive={responsive}
+        infinite={true}
+        itemClass="carousel-item"
+      >
         {categories &&
           categories.map((category) => (
             <ContainerIteis key={category.id} imageUrl={category.url}>

@@ -1,4 +1,5 @@
 import { CarouselCategory } from '../../components/CarouselCategory';
+import { CarouselProducts } from '../../components/CarouselProducts';
 import { Footer } from '../../components/footer';
 import { ContainerHeader, Header, Nav, CarouselContainer } from './styles';
 
@@ -20,6 +21,7 @@ export function Home() {
 
       <CarouselContainer>
         <section>
+          <CarouselProducts />
           <CarouselCategory />
         </section>
       </CarouselContainer>

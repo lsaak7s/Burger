@@ -4,30 +4,34 @@ const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-import { ContainerCarrocel, ConteinerIteis } from './styles';
+import { ContainerCarrocel, Title, ContainerIteis } from './styles';
 
 export function CarouselProducts() {
-  const [categories, setCategories] = useState([]);
+  const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    async function loadCategoris() {
+    async function loadProducts() {
       const { data } = await api.get('/listProducts');
-      setCategories(data);
+
+      const onlyOffers = data.filter((product) => product.offer);
+      setOffers(onlyOffers);
+      console.log(onlyOffers);
+      console.log(offers);
       console.log(data);
     }
-
-    loadCategoris();
+    loadProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 7,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -47,14 +51,18 @@ export function CarouselProducts() {
   console.log('Carousel', Carousel, '→ default:', Carousel && Carousel.default);*/
   return (
     <ContainerCarrocel>
+      <Title>Ofertas do dia</Title>
+
       <Carousel
         responsive={responsive}
         infinite={true}
-        partialVisbile={false}
+        partialVisible={false}
         itemClass="carousel-item"
       >
-        {categories.map((category) => (
-          <ConteinerIteis key={category.id}>{category.name},</ConteinerIteis>
+        {offers.map((offer) => (
+          <ContainerIteis key={offer.id} $imageurl={offer.url}>
+            <p>{offer.name}</p>
+          </ContainerIteis>
         ))}
       </Carousel>
     </ContainerCarrocel>
