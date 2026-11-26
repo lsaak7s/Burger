@@ -21,8 +21,8 @@ export function Home() {
 
       <CarouselContainer>
         <section>
-          <CarouselCategory />
           <CarouselProducts />
+          <CarouselCategory />
         </section>
       </CarouselContainer>
       <Footer />

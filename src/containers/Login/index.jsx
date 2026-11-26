@@ -38,6 +38,7 @@ export function Login() {
 
   const onSubmit = async (data) => {
     try {
+      // 1. Extrai o token diretamente da resposta do axios dentro do toast.promise
       const {
         data: { token },
       } = await toast.promise(
@@ -58,6 +59,8 @@ export function Login() {
           error: 'Deu ruim filho',
         }
       );
+
+      // 2. Salva a variável 'token' que recebemos lá em cima no localStorage
       localStorage.setItem('token', token);
     } catch (error) {
       console.error(error);

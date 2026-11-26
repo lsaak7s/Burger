@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/ReactToastify.css';
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');*/
 
   * { 
     margin: 0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Raleway", sans-serif;
-    font-weight:600;
+    /*font-family: "Raleway", sans-serif;
+    font-weight:600;*/
   }`;
 export default GlobalStyle;

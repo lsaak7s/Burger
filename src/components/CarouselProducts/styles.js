@@ -43,7 +43,7 @@ export const ContainerIteis = styled.div`
   display: flex;
   flex-direction: row;
 
-  background: url('${(props) => props.imageurl}') no-repeat center;
+  background: url('${(props) => props.$imageurl}');
   background-size: cover;
 
   width: 310px;
