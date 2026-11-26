@@ -8,6 +8,6 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing:border-box;
     font-family: "Raleway", sans-serif;
-    font-weight:300;
+    font-weight:600;
   }`;
 export default GlobalStyle;
