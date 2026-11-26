@@ -19,8 +19,8 @@ export function CarouselProducts() {
       console.log(offers);
       console.log(data);
     }
-
     loadProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const responsive = {
