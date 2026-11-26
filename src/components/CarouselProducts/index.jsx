@@ -60,7 +60,7 @@ export function CarouselProducts() {
         itemClass="carousel-item"
       >
         {offers.map((offer) => (
-          <ContainerIteis key={offer.id} imageUrl={offer.url}>
+          <ContainerIteis key={offer.id} $imageurl={offer.url}>
             <p>{offer.name}</p>
           </ContainerIteis>
         ))}
