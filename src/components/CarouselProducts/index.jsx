@@ -7,7 +7,7 @@ import { api } from '../../services/api';
 import { ContainerCarrocel, Title, ContainerIteis } from './styles';
 
 export function CarouselProducts() {
-  const [Offers, setOffers] = useState([]);
+  const [offers, setOffers] = useState([]);
 
   useEffect(() => {
     async function loadProducts() {
@@ -16,6 +16,8 @@ export function CarouselProducts() {
       const onlyOffers = data.filter((product) => product.offer);
       setOffers(onlyOffers);
       console.log(onlyOffers);
+      console.log(offers);
+      console.log(data);
     }
 
     loadProducts();
@@ -54,11 +56,12 @@ export function CarouselProducts() {
       <Carousel
         responsive={responsive}
         infinite={true}
+        partialVisible={false}
         itemClass="carousel-item"
       >
-        {Offers.map((Products) => (
-          <ContainerIteis key={Products.id} imageUrl={Products.url}>
-            <p>{Products.name}</p>
+        {offers.map((offer) => (
+          <ContainerIteis key={offer.id} imageUrl={offer.url}>
+            <p>{offer.name}</p>
           </ContainerIteis>
         ))}
       </Carousel>
