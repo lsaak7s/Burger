@@ -2,27 +2,27 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 
-  background-color: black;
-  border-radius: 15px;
+  min-width: 100%;
+  min-height: 100%;
 
-  padding: 20px;
+  background-color: rgb(194, 178, 178);
+  border-radius: 15px;
 
   div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
-    width: 100%;
-    height: 80px;
+    min-width: 100%;
+    min-height: 100%;
   }
   p {
     font-size: 18px;
   }
   strong {
-    font-size: 18px;
+    font-size: 38px;
   }
 `;
 export const CardImg = styled.img``;

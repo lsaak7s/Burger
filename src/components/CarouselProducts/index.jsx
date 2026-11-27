@@ -60,8 +60,8 @@ export function CarouselProducts() {
         partialVisible={false}
         itemClass="carousel-item"
       >
-        {offers.map((product) => (
-          <CardProducts key={product.id} product={product} />
+        {offers.map((products) => (
+          <CardProducts key={products.id} products={products} />
         ))}
       </Carousel>
     </ContainerCarrocel>
