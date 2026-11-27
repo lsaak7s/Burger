@@ -38,7 +38,7 @@ export const Title = styled.h2`
     background-color: rgb(26, 26, 26);
   }
 `;
-
+/*
 export const ContainerIteis = styled.div`
   display: flex;
   flex-direction: row;
@@ -71,3 +71,4 @@ export const ContainerIteis = styled.div`
     background: rgba(0, 0, 0, 0.7);
   }
 `;
+*/
