@@ -10,8 +10,14 @@ export const ContainerCarrocel = styled.div`
   width: 100%;
   max-width: 1280px;
 
+  .carousel-item {
+    overflow-x: hidden;
+  }
+
   .react-multi-carousel-list {
     width: 100%;
+
+    overflow: visible;
   }
 `;
 
