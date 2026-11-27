@@ -4,4 +4,8 @@ export const ContainerButton = styled.div`
   background-color: blue;
   width: 100%;
   height: 52px;
+
+  img {
+    width: 50px;
+  }
 `;

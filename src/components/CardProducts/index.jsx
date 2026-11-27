@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+import { CardButton } from '../CardButton';
 import { Container, CardImg } from './styles';
 
 export function CardProducts({ products }) {
@@ -11,6 +12,7 @@ export function CardProducts({ products }) {
         <p>{products.name}</p>
         <strong>R${products.price}</strong>
       </div>
+      <CardButton />
     </Container>
   );
 }
