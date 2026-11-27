@@ -4,7 +4,8 @@ const Carousel = CarouselModule.default || CarouselModule;
 import 'react-multi-carousel/lib/styles.css';
 
 import { api } from '../../services/api';
-import { ContainerCarrocel, Title, ContainerIteis } from './styles';
+import { CardProducts } from '../CardProducts';
+import { ContainerCarrocel, Title } from './styles';
 
 export function CarouselProducts() {
   const [offers, setOffers] = useState([]);
@@ -59,10 +60,8 @@ export function CarouselProducts() {
         partialVisible={false}
         itemClass="carousel-item"
       >
-        {offers.map((offer) => (
-          <ContainerIteis key={offer.id} $imageurl={offer.url}>
-            <p>{offer.name}</p>
-          </ContainerIteis>
+        {offers.map((products) => (
+          <CardProducts key={products.id} products={products} />
         ))}
       </Carousel>
     </ContainerCarrocel>
