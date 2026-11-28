@@ -10,7 +10,7 @@ export function CardProducts({ products }) {
       <CardImg src={products.url} alt={products.name} />
       <div>
         <p>{products.name}</p>
-        <strong>R${products.price}</strong>
+        <strong>{products.currentValue}</strong>
       </div>
       <CardButton />
     </Container>
