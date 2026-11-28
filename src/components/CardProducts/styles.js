@@ -17,6 +17,7 @@ export const Container = styled.div`
   /* Espaçamento interno e margem externa */
   padding: 20px;
   margin: 60px 10px 20px 10px;
+
   position: relative;
 
   /* Sombra leve para destacar os cards */
